@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Info</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+      <li><a href="skills.html">Back</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="final-review.html">Final Review</a></li>
+    </ul>
+  </nav>
+  <section class="content">
+    <h1>Contact Info</h1>
+    <form onsubmit="saveData(event)">
+      <input type="text" id="phone" placeholder="Phone Number" required />
+      <input type="text" id="linkedin" placeholder="LinkedIn Profile URL" required />
+      <button type="submit">Save & Finish</button>
+    </form>
+  </section>
+  <script>
+    function saveData(event) {
+      event.preventDefault();
+      ['phone', 'linkedin'].forEach(id => {
+        localStorage.setItem(id, document.getElementById(id).value);
+      });
+      window.location.href = "final-review.html";
+    }
+  </script>
+</body>
+</html>

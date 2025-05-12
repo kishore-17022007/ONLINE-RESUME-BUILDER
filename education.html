@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Education</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+      <li><a href="experience.html">Back</a></li>
+      <li><a href="education.html" class="active">Education</a></li>
+      <li><a href="skills.html">Next</a></li>
+    </ul>
+  </nav>
+  <section class="content">
+    <h1>Education</h1>
+    <form onsubmit="saveData(event)">
+      <input type="text" id="degree" placeholder="Degree" required />
+      <input type="text" id="school" placeholder="School Name" required />
+      <input type="text" id="eduYear" placeholder="Graduation Year" required />
+      <button type="submit">Save & Next</button>
+    </form>
+  </section>
+  <script>
+    function saveData(event) {
+      event.preventDefault();
+      ['degree', 'school', 'eduYear'].forEach(id => {
+        localStorage.setItem(id, document.getElementById(id).value);
+      });
+      window.location.href = "skills.html";
+    }
+  </script>
+</body>
+</html>

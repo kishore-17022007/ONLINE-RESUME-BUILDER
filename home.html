@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to Our Online Resume</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero { text-align: center; padding: 4rem 2rem; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #0366d6; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+    .features { display: grid; gap: 1rem; max-width: 700px; margin: 2rem auto; padding: 0 1rem; }
+    .feature { background: #ffffff; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    .feature h3 { margin-top: 0; color: #0077cc; }
+    .start-btn {
+      display: inline-block; margin-top: 2rem; padding: 0.75rem 1.5rem;
+      background: #0077cc; color: white; border-radius: 6px;
+      text-decoration: none; font-weight: bold; transition: background 0.3s ease;
+    }
+    .start-btn:hover { background: #005fa3; }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+      <li><a href="home.html" class="active">Home</a></li>
+    </ul>
+  </nav>
+  <section class="hero">
+    <h1>Welcome to My Online Resume Builder</h1>
+    <p>This is a multi-step resume builder that helps you create a clean, printable online CV.</p>
+    <a href="index.html" class="start-btn">Start Building Resume</a>
+  </section>
+  <section class="features">
+    <div class="feature"><h3>1. Personal Information</h3><p>Enter your name, job title, email, and location.</p></div>
+    <div class="feature"><h3>2. Experience</h3><p>Add your job title, company, and a short description of your responsibilities.</p></div>
+    <div class="feature"><h3>3. Education</h3><p>Include your degree, institution, and year of graduation.</p></div>
+    <div class="feature"><h3>4. Skills</h3><p>List your professional skills separated by commas.</p></div>
+    <div class="feature"><h3>5. Contact Info</h3><p>Add your phone number and LinkedIn or other relevant profiles.</p></div>
+  </section>
+</body>
+</html>

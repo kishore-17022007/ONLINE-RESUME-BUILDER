@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Skills</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+      <li><a href="education.html">Back</a></li>
+      <li><a href="skills.html" class="active">Skills</a></li>
+      <li><a href="contact.html">Next</a></li>
+    </ul>
+  </nav>
+  <section class="content">
+    <h1>Skills</h1>
+    <form onsubmit="saveData(event)">
+      <textarea id="skills" placeholder="Enter skills separated by commas" required></textarea>
+      <button type="submit">Save & Next</button>
+    </form>
+  </section>
+  <script>
+    function saveData(event) {
+      event.preventDefault();
+      localStorage.setItem("skills", document.getElementById("skills").value);
+      window.location.href = "contact.html";
+    }
+  </script>
+</body>
+</html>
